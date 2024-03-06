@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painting - My hobby 🖌️</title>
+    <style>
+      body {
+        background: linear-gradient(
+          68.6deg,
+          rgb(252, 165, 241) 1.8%,
+          rgb(181, 255, 255) 100.5%
+        );
+      }
+      h1 {
+        text-align: center;
+        font-size: 45px;
+        margin-bottom: 0;
+      }
+      h2 {
+        text-align: center;
+        font-size: 25px;
+      }
+
+      img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      p {
+        font-size: 17px;
+        line-height: 1.5;
+      }
+
+      a {
+        color: blueviolet;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #ff6aa0;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid rgb(239, 179, 239);
+        background: white;
+        font-size: 24px;
+        border-radius: 10px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      button:hover {
+        background: rgb(239, 179, 239);
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+
+      .painting-intro-picture {
+        transition: all 200ms ease-in-out;
+      }
+
+      .painting-intro-picture:hover {
+        filter: contrast(80%);
+        transform: scale(1.1);
+      }
+      .container {
+        max-width: 600px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        color: white;
+        font-size: 15px;
+      }
+      .theme-button {
+        font-size: 12px;
+        background: black;
+        color: white;
+        padding: 5px 8px;
+      }
+
+      .theme-button:hover {
+        color: black;
+        background: white;
+      }
+      .grid {
+        margin: 10px 0;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+      }
+
+      .grid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 250ms ease-in-out;
+      }
+
+      .grid img:hover {
+        transform: scale(1.7);
+      }
+      .dark {
+        background: radial-gradient(
+          circle at 24.1% 68.8%,
+          rgb(68, 67, 67) 0%,
+          rgb(0, 0, 0) 99.4%
+        );
+        color: #efb3ef;
+      }
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark a {
+        color: rgb(178, 123, 229);
+      }
+      .dark button {
+        background: rgb(239, 179, 239);
+        border: 1px solid white;
+      }
+      .dark button:hover {
+        background: black;
+        color: rgb(239, 179, 239);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Dark Theme</button>
+    <div class="container">
+      <h1>Painting</h1>
+      <hr />
+      <h2>My favorite hobby</h2>
+
+      <a href="https://en.wikipedia.org/wiki/Painting" target="_blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/017/original/hobbys-erwachsene-malen-text-media2.jpg?1706639377"
+          alt="People painting"
+          class="painting-intro-picture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/018/original/hobbys-erwachsene-malen-text-media4.jpg?1706639386"
+          alt="A Man painting"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/019/original/hobbys-erwachsene-malen-text-media-header.jpg?1706639392"
+          alt="A hand with a brush that it's painting"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/020/original/painting-brushes-2048x1365.jpg?1706639398"
+          alt="Brushes and acrylic colors"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/113/021/original/painting-ideas-2-1.jpg?1706639404"
+          alt="Women painting"
+        />
+      </div>
+
+      <p>
+        Painting is a visual art, which is characterized by the practice of
+        applying paint, pigment, color or other medium to a solid surface
+        (called the "matrix" or "support"). The medium is commonly applied to
+        the base with a brush, but other implements, such as knives, sponges,
+        and airbrushes, can be used.
+      </p>
+
+      <p>
+        📖 Learn more on
+        <a href="https://en.wikipedia.org/wiki/Painting" target="_blank"
+          >Wikipedia</a
+        >
+      </p>
+
+      <button class="get-in-touch">Learn Painting</button>
+    </div>
+    <footer>
+      Coded with 🩷 by
+      <a href="https://www.linkedin.com/in/alessandra-rinaldo/" target="_blank"
+        >Alessandra Rinaldo</a
+      >
+    </footer>
+    <script>
+      function getInTouch() {
+        let name = prompt("What is your name?");
+        let city = prompt("Where are you from?");
+        let email = prompt("What is your email address?");
+        let sentence =
+          "Thanks " +
+          name +
+          "! We have sent you an email with the best painting courses in your area! Good Luck!🍀";
+        alert(sentence);
+      }
+
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let getButton = document.querySelector(".get-in-touch");
+      getButton.addEventListener("click", getInTouch);
+      let changeButton = document.querySelector(".theme-button");
+      changeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
